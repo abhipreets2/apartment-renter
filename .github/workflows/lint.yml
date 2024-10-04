@@ -1,0 +1,27 @@
+name: Lint Workflow
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      #run: git clone https://github.com/abhipreets2/apartment-renter.git .
+      uses: actions/checkout@v4
+    
+    - name: Build application
+      uses: ./.github/actions/build-application
+
+    - name: Link with flake8
+      run: poetry run make check
+
