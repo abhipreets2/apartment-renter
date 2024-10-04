@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "production-ml"
+version = "0.1.0"
+description = ""
+authors = ["abhipreets2 <abhipreets2@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+scikit-learn = "^1.5.2"
+pandas = "^2.2.3"
+pydantic-settings = "^2.5.2"
+loguru = "^0.7.2"
+sqlalchemy = "^2.0.35"
+flake8 = "^7.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
